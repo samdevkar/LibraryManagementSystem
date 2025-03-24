@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.lib.model.Author;
 import com.lib.model.Book;
+import com.lib.model.Genre;
 import com.lib.repository.BookRepository;
 
 @Service
@@ -47,4 +48,9 @@ public class BookService {
 	 public List<Book>getAllBooks(){
 		 return bookRepository.findAll();
 	 }
+
+	public List<Book> findByGener(String genre) {
+		return bookRepository.findByGenre(genre);
+		
+	}
 }
